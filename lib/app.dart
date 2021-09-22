@@ -12,6 +12,7 @@ class PortfolioApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: LandingPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
