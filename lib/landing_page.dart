@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/role_widget_template.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -121,135 +122,70 @@ class LandingPage extends StatelessWidget {
                           children: [
                             const Spacer(),
                             Expanded(
-                              child: Column(
-                                children: [
-                                  const SizedBox(
-                                    height: 48,
-                                  ),
-                                  SizedBox(
-                                    height: 48,
-                                    width: 48,
-                                    child: Image.network(
-                                        'https://mattfarley.ca/img/icons/designer.svg'),
-                                  ),
-                                  const SizedBox(
-                                    height: 32,
-                                  ),
-                                  const Text(
-                                    'Designer',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
-                                  ),
-                                  const SizedBox(
-                                    height: 24,
-                                  ),
-                                  const Text(
-                                    'I value simple content structure, clean design patterns, and thoughtful interactions.',
-                                    textAlign: TextAlign.center,
-                                  ),
-                                  const SizedBox(
-                                    height: 32,
-                                  ),
-                                  const Text(
-                                    'Things I enjoy designing:',
-                                    style: TextStyle(
-                                      color: Color(0xff7510f7),
+                              flex: 3,
+                              child: Card(
+                                elevation: 2,
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(16))),
+                                child: Container(
+                                  decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(16))),
+                                  child: IntrinsicHeight(
+                                    child: Row(
+                                      children: const [
+                                        SizedBox(
+                                          width: 16,
+                                        ),
+                                        Expanded(
+                                          child: RoleWidgetTemplate(
+                                            imageUrl:
+                                                'https://mattfarley.ca/img/icons/designer.svg',
+                                            role: 'Designer',
+                                            roleDescription:
+                                                'I value simple content structure, clean design patterns, and thoughtful interactions.',
+                                            whatIDoTitle:
+                                                'Things I enjoy designing:',
+                                            whatIDo:
+                                                'UX, UI, Web, Mobile, Apps, Logos',
+                                          ),
+                                        ),
+                                        VerticalDivider(),
+                                        Expanded(
+                                          child: RoleWidgetTemplate(
+                                            imageUrl:
+                                                'https://mattfarley.ca/img/icons/frontend.svg',
+                                            role: 'Front-end Developer',
+                                            roleDescription:
+                                                'I like to code things from scratch, and enjoy bringing ideas to life in the browser.',
+                                            whatIDoTitle: 'Languages I speak:',
+                                            whatIDo:
+                                                'HTML, Pug, Slim, CSS, Sass, Less',
+                                          ),
+                                        ),
+                                        VerticalDivider(),
+                                        Expanded(
+                                          child: RoleWidgetTemplate(
+                                            imageUrl:
+                                                'https://mattfarley.ca/img/icons/mentor.svg',
+                                            role: 'Mentor',
+                                            roleDescription:
+                                                'I genuinely care about people, and love helping fellow designers work on their craft.',
+                                            whatIDoTitle:
+                                                'Experiences I draw from:',
+                                            whatIDo:
+                                                'UX/UI, Product design, Freelancing',
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 16,
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                  const SizedBox(
-                                    height: 16,
-                                  ),
-                                  const Text(
-                                      'UX, UI, Web, Mobile, Apps, Logos'),
-                                  const SizedBox(
-                                    height: 64,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  const SizedBox(
-                                    height: 32,
-                                  ),
-                                  SizedBox(
-                                    height: 48,
-                                    width: 48,
-                                    child: Image.network(
-                                        'https://mattfarley.ca/img/icons/designer.svg'),
-                                  ),
-                                  const SizedBox(
-                                    height: 32,
-                                  ),
-                                  const Text(
-                                    'Designer',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
-                                  ),
-                                  const SizedBox(
-                                    height: 24,
-                                  ),
-                                  const Text(
-                                      'I value simple content structure, clean design patterns, and thoughtful interactions.'),
-                                  const SizedBox(
-                                    height: 32,
-                                  ),
-                                  const Text(
-                                    'Things I enjoy designing:',
-                                    style: TextStyle(
-                                      color: Color(0xff7510f7),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 16,
-                                  ),
-                                  const Text('UX, UI, Web, Mobile, Apps, Logos')
-                                ],
-                              ),
-                            ),
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  const SizedBox(
-                                    height: 32,
-                                  ),
-                                  SizedBox(
-                                    height: 48,
-                                    width: 48,
-                                    child: Image.network(
-                                        'https://mattfarley.ca/img/icons/designer.svg'),
-                                  ),
-                                  const SizedBox(
-                                    height: 32,
-                                  ),
-                                  const Text(
-                                    'Designer',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
-                                  ),
-                                  const SizedBox(
-                                    height: 24,
-                                  ),
-                                  const Text(
-                                      'I value simple content structure, clean design patterns, and thoughtful interactions.'),
-                                  const SizedBox(
-                                    height: 32,
-                                  ),
-                                  const Text(
-                                    'Things I enjoy designing:',
-                                    style: TextStyle(
-                                      color: Color(0xff7510f7),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 16,
-                                  ),
-                                  const Text('UX, UI, Web, Mobile, Apps, Logos')
-                                ],
+                                ),
                               ),
                             ),
                             const Spacer(),
