@@ -194,7 +194,56 @@ class LandingPage extends StatelessWidget {
                       ),
                     )
                   ],
-                )
+                ),
+                const SizedBox(
+                  height: 72,
+                ),
+                const Text(
+                  'My Recent Work',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                const Text(
+                    'Here are a few design projects I\'ve worked on recently. Want to see more? Email me.'),
+                const SizedBox(
+                  height: 24,
+                ),
+                Row(
+                  children: [
+                    const Spacer(),
+                    Expanded(
+                      flex: 3,
+                      child: GridView.builder(
+                          shrinkWrap: true,
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 3,
+                                  mainAxisSpacing: 30,
+                                  crossAxisSpacing: 30,
+                                  childAspectRatio: 1.3),
+                          //heavy work => Fib (Number) => crossAxisCount, 1 sec 1/16ms => 1000/16 => 75
+                          // 1 frame drop => lagging
+                          // Flutter => | UI => Platform |
+                          itemCount: 6,
+                          itemBuilder: (context, index) {
+                            return Container(
+                              decoration: const BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(16)),
+                                  image: DecorationImage(
+                                    image: NetworkImage(
+                                        'https://mattfarley.ca/img/projects/chronicled.png'),
+                                    fit: BoxFit.cover,
+                                  )),
+                            );
+                          }),
+                    ),
+                    const Spacer(),
+                  ],
+                ),
               ],
             ),
           ),
